@@ -1,0 +1,665 @@
+/*************** Start Fonts ***************/
+@font-face {
+  font-family: "tt comone";
+  font-weight: 300;
+  src: url("../../Public/Fonts/TT\ Commons\ Light.otf");
+}
+@font-face {
+  font-family: "tt comone";
+  font-weight: 600;
+  src: url("../../Public/Fonts/TT\ Commons\ Bold.otf");
+}
+@font-face {
+  font-family: "tt comone";
+  font-weight: 400;
+  src: url("../../Public/Fonts/TT\ Commons\ Regular.otf");
+}
+/*************** End Fonts ***************/
+:root {
+  --theme-color: #ffd803;
+  font-family: "tt comone";
+  --footer-text: rgb(188, 188, 188);
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/*************** Start Header ***************/
+.container .header {
+  width: 100%;
+  padding: 10px 0;
+}
+/***** Start Nav *****/
+.container .header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.container .header .nav .nav-logo {
+  max-width: 150px;
+}
+.container .header .nav .nav-btn a {
+  background-color: var(--theme-color);
+  padding: 9px 26px 11px 26px;
+  border-radius: 8px;
+  color: white;
+}
+/***** End Nav *****/
+/***** Start Responsive Nav *****/
+@media (max-width: 768px) {
+  .container .header .nav .nav-btn,
+  .nav-menu {
+    display: none;
+  }
+}
+/***** End Responsive Nav *****/
+/***** Start Banner *****/
+.container .header .banner {
+  width: 100%;
+  background-color: var(--theme-color);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px 50px;
+}
+.container .header .banner .banner-info {
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+.container .header .banner .banner-info .banner-title {
+  font: 600 2.4vw/1.5em "tt comone";
+}
+.container .header .banner .banner-info .banner-desc {
+  font: 300 1.55vw/0.9em "tt comone";
+}
+.container .header .banner .banner-info .banner-btn {
+  display: flex;
+  gap: 0.6vw;
+}
+.container .header .banner .banner-info .banner-btn a {
+  padding: 0.8vw 3.5vw;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-size: 1.5vw;
+}
+/*** Start Manual Class Banner btn ***/
+.c-white {
+  color: white;
+}
+.bg-white {
+  color: var(--theme-color);
+  background-color: white;
+}
+/*** End Manual Class Banner btn ***/
+.container .header .banner .banner-image {
+  max-width: 40%;
+  width: 100%;
+}
+/***** Start Responsive Banner *****/
+@media (max-width: 992px) {
+  .container .header .banner {
+    flex-direction: column;
+    padding: 25px 50px 0 25px;
+    align-items: center;
+  }
+  .container .header .banner .banner-info {
+    max-width: 71%;
+  }
+  .container .header .banner .banner-image {
+    max-width: 50%;
+  }
+  .container .header .banner .banner-info .banner-title {
+    font-size: 2.8vw;
+  }
+  .container .header .banner .banner-info .banner-desc {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 576px) {
+  .container .header .banner .banner-info {
+    max-width: 95%;
+  }
+  .container .header .banner .banner-image {
+    max-width: 90%;
+    margin-top: -60px;
+    margin-right: -50px;
+  }
+  .container .header .banner .banner-info .banner-title {
+    font-size: 4.8vw;
+  }
+  .container .header .banner .banner-info .banner-btn .c-white,
+  .banner-desc {
+    display: none;
+  }
+  .container .header .banner .banner-info .banner-btn a {
+    font-size: 4vw;
+    padding: 2vw 8vw;
+  }
+}
+/***** End Responsive Banner *****/
+/*************** End Header ***************/
+
+/*************** Start Main ***************/
+/***** Start Cards *****/
+.container .main .cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+.container .main .cards .card {
+  width: 100%;
+  background-color: var(--theme-color);
+  text-align: center;
+}
+.container .main .cards .card .card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+  padding-top: 15px;
+}
+.container .main .cards .card .card-info .info-title {
+  max-width: 40%;
+  font-size: 1.6vw;
+  line-height: 1.2em;
+}
+.container .main .cards .card .card-info .info-desc {
+  font: 300 100%/0.9em "tt comone";
+}
+/***** Start Responsive Cards *****/
+@media (max-width: 992px) {
+  .container .main .cards .card .card-info .info-desc {
+    max-width: 90%;
+  }
+}
+@media (max-width: 868px) {
+  .container .main .cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+  .container .main .cards .card {
+    flex: 0 0 auto;
+    width: 46%;
+    gap: 1rem;
+  }
+  .container .main .cards .card .card-info .info-title {
+    max-width: 30%;
+    font-size: 2.3vw;
+    line-height: 1.2em;
+  }
+  @media (max-width: 576px) {
+    .container .main .cards {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+    .container .main .cards .card {
+      flex: 0 0 auto;
+      width: 76%;
+      gap: 1rem;
+    }
+    .container .main .cards .card .card-info .info-title {
+      font-size: 3.7vw;
+    }
+    .container .main .cards .card .card-info .info-desc {
+      max-width: 80%;
+    }
+  }
+}
+/***** End Responsive Cards *****/
+/***** End Cards *****/
+
+/***** Start Brand Section *****/
+.brands {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.brands .border-linear-grade {
+  width: 1110px;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    #c0ccda1a 10%,
+    #c0ccda1a 80%,
+    #c0ccda1a 10%
+  );
+}
+.brands .brands-box {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.7vw;
+}
+.brands .brand-items {
+  max-width: 90px;
+}
+/***** Start Responsive Brand Section *****/
+
+@media (max-width: 768px) {
+  .brands .brands-box {
+    max-width: 100%;
+    padding: 10px 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  .brands .brand-items {
+    flex: 0 0 auto;
+    width: 90%;
+  }
+}
+/***** End Responsive Brand Section *****/
+/***** End Brand Section *****/
+
+/***** Start Skills Section *****/
+.skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+.skills .skills-title {
+  max-width: 500px;
+  text-align: center;
+}
+.skills .skills-title .title {
+  font: 800 3rem/4rem "tt comone";
+}
+.skills .skills-title .description {
+  font: 400 18px/2rem "tt comone";
+}
+.skills .skills-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap column;
+  gap: 5rem;
+}
+.skills .skills-items .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.skills .skills-items .row .items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+}
+.skills .skills-items .row .items .title {
+  font: 600 1.5rem/2rem "tt comone";
+}
+.skills .skills-items .row .items .explain {
+  font: 400 1rem/26px "tt comone";
+  text-align: center;
+}
+.skills .skills-items .row .items .skill-img {
+  max-width: 36px;
+}
+/***** Start Responsive Skill Section *****/
+@media (max-width: 992px) {
+  .container .main .skills .skills-items {
+    flex-direction: row;
+    gap: 6rem;
+  }
+  .container .main .skills .skills-items .row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .container .main .skills .skills-items {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .container .main .skills .skills-title .title {
+    font-size: 42px;
+    line-height: 1em;
+  }
+  .container .main .skills .skills-title .description {
+    max-width: 300px;
+    margin: 1rem auto 0;
+  }
+}
+@media (max-width: 360px) {
+  .container .main .skills .skills-title .title {
+    font-size: 40px;
+    line-height: 1em;
+  }
+  .container .main .skills .skills-title .description {
+    max-width: 280px;
+  }
+}
+/***** End Responsive Skill Section *****/
+/***** End Skills Section *****/
+/*Start New Section Top Section*/
+.container .main .new-resource-top {
+  margin: 4rem 0 5rem;
+}
+.container .main .new-resource-top .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.7rem;
+}
+.container .main .new-resource-top .title h5 {
+  font: 400 1.5rem/2rem "tt comone";
+}
+.container .main .new-resource-top .title h2 {
+  font: 700 3rem/2rem "tt comone";
+}
+.container .main .new-resource-top .img-section {
+  max-width: 972px;
+  aspect-ratio: 2.94;
+  margin: 3.5rem auto 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.container .main .new-resource-top .bg-color-section {
+  max-width: 100%;
+  height: 121px;
+  background-color: var(--theme-color);
+}
+/*Start Responsive New Resource Top Section*/
+@media (max-width: 1024px) {
+  .container .main .new-resource-top .title h2 {
+    font-size: 42px;
+  }
+  .container .main .new-resource-top .img-section {
+    max-width: 750px;
+  }
+}
+@media (max-width: 868px) {
+  .container .main .new-resource-top .bg-color-section {
+    display: none;
+  }
+  .container .main .new-resource-top .img-section {
+    margin-top: 2.5rem;
+  }
+  .container .main .new-resource-top .title {
+    gap: 1rem;
+  }
+  .container .main .new-resource-top .title h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .container .main .new-resource-top {
+    display: none;
+  }
+}
+/*****End Responsive New Resource Top Section*****/
+/* Start New Resources Grid */
+.container .main .new-resources-grid {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  gap: 1.5vw;
+  margin-top: 20px;
+}
+.container .main .new-resources-grid .grid-items {
+  background-color: var(--theme-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2.5vw;
+  padding: 30px 0 0 0;
+}
+.container .main .new-resources-grid .grid-title h5 {
+  font-weight: 300;
+  font-size: 1.5vw;
+}
+.container .main .new-resources-grid .grid-title h3 {
+  font-size: 2.3vw;
+}
+.container .main .new-resources-grid .grid-image {
+  max-width: 70%;
+  width: 100%;
+}
+.container .main .new-resources-grid .grid-image img {
+  border-radius: 8px;
+}
+/***** Start Responsive New Resources Grid *****/
+@media (max-width: 867px) {
+  /* Set up new-resources-grid section for horizontal scrolling */
+  .container .main .new-resources-grid {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 2.5vw;
+  }
+  /* Set width and flex properties for individual grid items */
+  .container .main .new-resources-grid .grid-items {
+    width: 85%;
+    flex: 0 0 auto;
+  }
+  /* Adjust font size for grid item subtitle */
+  .container .main .new-resources-grid .grid-title h5 {
+    font-size: 2.8vw;
+  }
+  /* Adjust font size for grid item title */
+  .container .main .new-resources-grid .grid-title h3 {
+    font-size: 4vw;
+  }
+}
+/* End New Resources Grid */
+/*Start Gabung Section*/
+.container .main .gabung {
+  margin: 6rem 0 4rem;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: var(--theme-color);
+}
+.container .main .gabung .gabung-title {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 2.5rem;
+}
+.container .main .gabung .gabung-title h3 {
+  max-width: 500px;
+  font: 800 40px/54px "tt comone";
+}
+.container .main .gabung-title .gabung-btn {
+  width: 240px;
+  text-align: center;
+  padding: 14px 0;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.container .main .gabung .gabung-title .gabung-btn a {
+  font: 700 20px/30px "tt comone";
+  color: var(--theme-color);
+}
+.container .main .gabung .gabung-img {
+  position: relative;
+}
+.container .main .gabung .gabung-img .img {
+  overflow: hidden;
+  max-width: 430px;
+  position: relative;
+  border-radius: 50%;
+  right: -13rem;
+  transform: scale(1.8);
+}
+.container .main .gabung .gabung-img .img img {
+  position: relative;
+  left: -3.5rem;
+  top: 1.2rem;
+  width: 100%;
+}
+.container .main .gabung .gabung-img .mirror {
+  position: absolute;
+  border-radius: 12px;
+  border: 4px dashed #ffffff;
+  bottom: -94px;
+  left: -3rem;
+  width: 12rem;
+  height: 260px;
+  background-color: rgba(196, 196, 196, 0.36);
+  transform: rotate(8.8deg);
+}
+.container .main .gabung .arrow {
+  position: absolute;
+  max-width: 160px;
+  left: 29.5rem;
+}
+/***** End Gabung Section *****/
+/*Start Responsive Gabung Section*/
+@media (max-width: 1200px) {
+  .container .main .gabung .mirror {
+    display: none;
+  }
+  .container .main .gabung .gabung-title h3 {
+    font-size: 36px;
+    max-width: 450px;
+  }
+  .container .main .gabung .arrow {
+    left: 25.5rem;
+  }
+  .container .main .gabung .gabung-img .img {
+    transform: scale(1.6);
+  }
+  .container .main .gabung-title .gabung-btn {
+    width: 200px;
+  }
+  .container .main .gabung .gabung-title .gabung-btn a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .container .main .gabung .arrow {
+    display: none;
+  }
+  .container .main .gabung .gabung-img .img {
+    transform: scale(1.4);
+  }
+  .container .main .gabung .gabung-title h3 {
+    font-size: 32px;
+    max-width: 400px;
+  }
+  .container .main .gabung-title .gabung-btn {
+    width: 10rem;
+    padding: 10px 0;
+  }
+  .container .main .gabung .gabung-title {
+    gap: 1rem;
+  }
+}
+@media (max-width: 868px) {
+  .container .main .gabung {
+    display: none;
+  }
+}
+/* End Responsive gabung Section */
+/*************** End Main ***************/
+
+/***************  Start Footer  ***************/
+/*  Footer Left  */
+.footer {
+  width: 100%;
+  min-height: 300px;
+  background-color: #01010e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--footer-text);
+  margin-top: 20px;
+}
+.footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer .footer-left .footer-logo {
+  max-width: 150px;
+}
+.footer .footer-left .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.footer .footer-left .footer-links .top-links,
+.bottom-links.desktop,
+.bottom-links.mobile {
+  display: flex;
+  gap: 25px;
+}
+.footer .footer-left .footer-links .mobile {
+  display: none;
+}
+.footer .footer-left .footer-links .link-items a {
+  color: var(--footer-text);
+  padding: 8px 0 0 0;
+}
+.footer .footer-left .footer-copyright {
+  font-size: 14px;
+  font-family: "tt comone";
+}
+/*  Footer Right  */
+.footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer .footer-right .footer-apps {
+  max-width: 120px;
+}
+.footer .footer-right .footer-apps img {
+  padding-bottom: 10px;
+}
+/********** Start Responsive Footer **********/
+@media (max-width: 768px) {
+  /* Arrange footer items in column layout */
+  .footer {
+    flex-direction: column;
+  }
+  /* Hide the right side of the footer */
+  .footer .footer-right {
+    display: none;
+  }
+  /* Hide desktop links in footer and show mobile links */
+  .footer .footer-left .footer-links .desktop {
+    display: none;
+  }
+  .footer .footer-left .footer-links .mobile {
+    display: flex;
+  }
+  /********** End Responsive Footer **********/
+}
+/***************  End Footer   ***************/
